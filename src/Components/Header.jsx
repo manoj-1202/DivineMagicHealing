@@ -268,21 +268,21 @@ const Header = () => {
                 {dropdownOpen.services && (
                   <div className="pl-4 mt-2 space-y-2">
                     <NavLink
-                      to="/services/healing"
+                      to="/services"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Pregnancy Healing
                     </NavLink>
                     <NavLink
-                      to="/services/consultation"
+                      to="/services"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Negative Cords Cutting
                     </NavLink>
                     <NavLink
-                      to="/services/therapy"
+                      to="/services"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
@@ -315,21 +315,21 @@ const Header = () => {
                 {dropdownOpen.courses && (
                   <div className="pl-4 mt-2 space-y-2">
                     <NavLink
-                      to="/courses/meditation"
+                      to="/courses"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Reiki Level 1,2,3&4
                     </NavLink>
                     <NavLink
-                      to="/courses/reiki"
+                      to="/courses"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Ho’oponopono Basic & Advanced
                     </NavLink>
                     <NavLink
-                      to="/courses/reiki"
+                      to="/courses"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
@@ -369,21 +369,21 @@ const Header = () => {
                       Reiki Healing
                     </NavLink>
                     <NavLink
-                      to="/healing/sessions"
+                      to="/healingCard"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Advanced Ho’ oponopono Healing
                     </NavLink>
                     <NavLink
-                      to="/healing/sessions"
+                      to="/healingcard"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Crystal Healing
                     </NavLink>
                     <NavLink
-                      to="/healing/sessions"
+                      to="/healingCard"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
@@ -416,21 +416,21 @@ const Header = () => {
                       Reiki Healing Crystal
                     </NavLink>
                     <NavLink
-                      to="/store/energy-crystals"
+                      to="/store"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Aura Cleansing Spray
                     </NavLink>
                     <NavLink
-                      to="/store/aura-sprays"
+                      to="/store"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
                       Chakra Balancing Bracelet
                     </NavLink>
                     <NavLink
-                      to="/store/aura-sprays"
+                      to="/store"
                       className={dropdownLinkClass}
                       onClick={toggleMenu}
                     >
