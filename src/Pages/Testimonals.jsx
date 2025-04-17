@@ -1,10 +1,14 @@
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import SocialMedia from "../Components/SocialMedia";
 
 const Testimonals = () => {
+ 
+
   const videos = [
     "https://www.youtube.com/embed/xyz1",
     "https://www.youtube.com/embed/xyz2",
@@ -126,7 +130,12 @@ const Testimonals = () => {
           </Swiper>
         </div>
       </div>
-      </div>
+     
+
+
+           <SocialMedia/>
+
+       </div>
       </div>
     
    

@@ -17,6 +17,7 @@ import Testimonials from './Pages/Testimonals';
 import CourseBooking from './Data/CourseBooking';
 import ServiceCard from './Pages/ServiceCard';
 import HealingCard from './Pages/HealingCard';
+import SocialMedia from './Components/SocialMedia';
 
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/healingCard" element={<HealingCard />} />
         <Route path="/services" element={<ServiceCard/>} />
+        <Route path="/socialMedia" element={<SocialMedia/>} />
+
       </Routes>
       <Footer /> 
     </Router>
