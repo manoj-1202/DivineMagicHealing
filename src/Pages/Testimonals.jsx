@@ -54,7 +54,7 @@ const Testimonals = () => {
 
   return (
     <div className="w-full  font-title">
-       <div className="max-w-[1300px] mx-auto px-2 sm:px-0 lg:px-0">
+        <div className="max-w-[1300px] mx-auto">
 
       {/* Youttube Vido section */}
 

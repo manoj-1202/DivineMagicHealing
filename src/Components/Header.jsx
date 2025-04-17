@@ -49,7 +49,7 @@ const Header = () => {
 
   return (
     <div className="w-full  font-title">
-       <div className="max-w-[1300px]   mx-auto px-2 sm:px-0 lg:px-0">
+        <div className="max-w-[1300px] mx-auto">
     <header className="bg-gray-300 shadow-lg relative z-50 font-title">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <NavLink to="/" className="block w-[140px] sm:w-[160px]">

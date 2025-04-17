@@ -27,7 +27,7 @@ const Banner = () => {
 
   return (
     <div className="w-full  font-title">
-       <div className="max-w-[1300px]  mx-auto px-2 sm:px-0 lg:px-0">
+       <div className="max-w-[1300px] mx-auto">
       <div
         className="relative w-full h-[450px] sm:h-[500px] lg:h-[600px] bg-cover bg-center"
         style={{ backgroundImage: `url(${bannerB})` }} //
