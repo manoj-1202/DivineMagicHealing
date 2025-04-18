@@ -1,24 +1,40 @@
 import { products } from "../Data/StoreData";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import storeBanner from "../Assets/about/storeBanner.png";
 
 const Store = () => {
   return (
-    <div className="w-full py-12 bg-gray-50 border-t font-title">
+    <div className="w-full  bg-gray-100  font-title">
+      
+{/* Healing  banner */}
+<div className="max-w-[1300px] mx-auto">
+        <div
+          className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
+          style={{ backgroundImage: `url(${storeBanner})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 rounded-b-xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-center px-6">
+            <div className="text-white z-10 space-y-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold drop-shadow-lg">
+              Energy Products Store
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto">
+                Learn Various Modalities of Healing Learn in-depth about the
+                deeper sciences of energy and implement their superpowers in
+                your life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+      
       
 
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2
-          className="text-center text-black text-3xl sm:text-3xl lg:text-3xl font-semibold mb-10"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Energy Products Store
-        </motion.h2>
-
         {/* Back button */}
-                <div className="w-full px-4 sm:px-6 lg:px-8 mb-4">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="w-full px-4 sm:px-6 lg:px-8 mt-5">
                   <h3 className="text-center sm:text-left text-black text-base sm:text-lg font-medium">
                     <Link
                       to="/"
@@ -31,7 +47,7 @@ const Store = () => {
                   </h3>
                 </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           <AnimatePresence>
             {products.map((product) => (
               <motion.div

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { coursesData } from "../Data/CoursesData";
 import { motion, AnimatePresence } from "framer-motion";
+import courseBanner from "../Assets/about/courseBanner.png";
 
 const filterOptions = ["All", "Healing", "Spiritual", "Mental"];
 
@@ -14,14 +15,33 @@ const Courses = () => {
       : coursesData.filter((course) => course.category === selectedFilter);
 
   return (
-    <div className="w-full bg-gray-100 py-12 border-t border-purple-200 font-title">
-    <h2 className="text-center text-2xl sm:text-3xl font-bold text-black mb-10">
-        Our Courses
-      </h2>
+    <div className="w-full bg-gray-100  font-title">
+
+    {/* course banner */}
+    <div className="max-w-[1300px] mx-auto">
+    <div
+          className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
+          style={{ backgroundImage: `url(${courseBanner})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 rounded-b-xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-center px-6">
+            <div className="text-white z-10 space-y-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold drop-shadow-lg">
+                Courses
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto">
+              Learn Various Modalities of Healing Learn in-depth about the
+              deeper sciences of energy and implement their superpowers in your
+              life.
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back button */}
-        <div className="w-full px-4 sm:px-6 lg:px-8 mb-4">
+        <div className="w-full px-4 sm:px-6 lg:px-8 mt-5">
           <h3 className="text-center sm:text-left text-black text-base sm:text-lg font-medium">
             <Link
               to="/"

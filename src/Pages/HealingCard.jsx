@@ -2,6 +2,7 @@ import { useState } from "react";
 import { healings } from "../Data/HealingData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import healingBanner from "../Assets/about/healingBanner.png";
 
 const filterOptions = ["All", "Energy", "Sound", "Mental", "Divine", "Crystal"];
 
@@ -14,29 +15,46 @@ const HealingCard = () => {
       : healings.filter((h) => h.category === selectedCategory);
 
   return (
-    <div className="w-full bg-gray-100 py-12 font-title">
-         
+    <div className="w-full bg-gray-100  font-title">
+      {/* Healing  banner */}
+      <div className="max-w-[1300px] mx-auto">
+        <div
+          className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
+          style={{ backgroundImage: `url(${healingBanner})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 rounded-b-xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-center px-6">
+            <div className="text-white z-10 space-y-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold drop-shadow-lg">
+                Healing
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto">
+                Learn Various Modalities of Healing Learn in-depth about the
+                deeper sciences of energy and implement their superpowers in
+                your life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      {/* Back button  */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-2xl sm:text-3xl lg:text-3xl font-bold text-black mb-10">
-          Our Healing Services
-        </h2>
-
-       {/* Back button  */}
-                <div className="w-full px-4 sm:px-6 lg:px-8 mb-4">
-                  <h3 className="text-center sm:text-left text-black text-base sm:text-lg font-medium">
-                    <Link
-                      to="/"
-                      className="hover:underline hover:text-gray-500 transition-colors duration-200"
-                    >
-                      Home
-                    </Link>
-                    <span className="mx-2">|</span>
-                    <span className="text-gray-500">Healing</span>
-                  </h3>
-                </div>
+        <div className="w-full px-4 sm:px-6 lg:px-8 mt-5">
+          <h3 className="text-center sm:text-left text-black text-base sm:text-lg font-medium">
+            <Link
+              to="/"
+              className="hover:underline hover:text-gray-500 transition-colors duration-200"
+            >
+              Home
+            </Link>
+            <span className="mx-2">|</span>
+            <span className="text-gray-500">Healing</span>
+          </h3>
+        </div>
 
         {/* Filter Buttons */}
+
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {filterOptions.map((option) => (
             <button

@@ -24,8 +24,8 @@ const About = () => {
         </div>
 
         {/* About Section */}
-        <div className="py-16 px-6 sm:px-10 lg:px-20 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-purple-800 mb-4">
+        <div className="py-10 px-6 sm:px-10 lg:px-20 text-center">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-4">
             About Divine Magic Healing Space
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto">

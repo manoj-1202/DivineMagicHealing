@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import facebook from "../Assets/socialicons/facebook.png";
 import instagram from "../Assets/socialicons/instagram.png";
 import linkedin from "../Assets/socialicons/linkedin.png";
@@ -21,8 +21,8 @@ const SocialMedia = () => {
   );
 
   return (
-    <div className="w-full font-title bg-purple-50">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full  font-title">
+      <div className="max-w-[1300px] mx-auto">
         {/* Stay connected section */}
         <section className="bg-gray-200 py-12 px-4 md:px-10 lg:px-20">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
@@ -48,32 +48,68 @@ const SocialMedia = () => {
               <div className="flex justify-center lg:justify-start">
                 <div className="space-y-4 text-center lg:text-left">
                   <SocialLink
-                    icon={<img src={facebook} alt="Facebook" className="w-5 h-5 mx-auto lg:mx-0" />}
+                    icon={
+                      <img
+                        src={facebook}
+                        alt="Facebook"
+                        className="w-5 h-5 mx-auto lg:mx-0"
+                      />
+                    }
                     label="facebook"
                     url="https://facebook.com"
                   />
                   <SocialLink
-                    icon={<img src={twitter} alt="X" className="w-5 h-5 mx-auto lg:mx-0" />}
+                    icon={
+                      <img
+                        src={twitter}
+                        alt="X"
+                        className="w-5 h-5 mx-auto lg:mx-0"
+                      />
+                    }
                     label="X"
                     url="https://twitter.com"
                   />
                   <SocialLink
-                    icon={<img src={youtube} alt="YouTube" className="w-5 h-5 mx-auto lg:mx-0" />}
+                    icon={
+                      <img
+                        src={youtube}
+                        alt="YouTube"
+                        className="w-5 h-5 mx-auto lg:mx-0"
+                      />
+                    }
                     label="youtube"
                     url="https://youtube.com"
                   />
                   <SocialLink
-                    icon={<img src={social} alt="WhatsApp" className="w-5 h-5 mx-auto lg:mx-0" />}
+                    icon={
+                      <img
+                        src={social}
+                        alt="WhatsApp"
+                        className="w-5 h-5 mx-auto lg:mx-0"
+                      />
+                    }
                     label="whatsapp"
                     url="https://wa.me/your-number"
                   />
                   <SocialLink
-                    icon={<img src={instagram} alt="Instagram" className="w-5 h-5 mx-auto lg:mx-0" />}
+                    icon={
+                      <img
+                        src={instagram}
+                        alt="Instagram"
+                        className="w-5 h-5 mx-auto lg:mx-0"
+                      />
+                    }
                     label="instagram"
                     url="https://instagram.com"
                   />
                   <SocialLink
-                    icon={<img src={linkedin} alt="LinkedIn" className="w-5 h-5 mx-auto lg:mx-0" />}
+                    icon={
+                      <img
+                        src={linkedin}
+                        alt="LinkedIn"
+                        className="w-5 h-5 mx-auto lg:mx-0"
+                      />
+                    }
                     label="linkedin"
                     url="https://linkedin.com"
                   />

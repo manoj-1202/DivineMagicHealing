@@ -2,6 +2,7 @@ import { useState } from "react";
 import { services } from "../Data/ServicesData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import serviceBanner from "../Assets/about/serviceBanner.png";
 
 const filterOptions = [
   "All",
@@ -25,15 +26,33 @@ const ServiceCard = () => {
       : services.filter((service) => service.category === selectedFilter);
 
   return (
-    <div className="w-full bg-gray-100 py-12 border-t font-title">
+    <div className="w-full bg-gray-100 border-t font-title">
         
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-2xl sm:text-3xl font-bold text-black mb-10">
-          Services Offered
-        </h2>
+        {/* Services banner */}
+    <div className="max-w-[1300px] mx-auto">
+    <div
+          className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
+          style={{ backgroundImage: `url(${serviceBanner})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 rounded-b-xl"></div>
+          <div className="absolute inset-0 flex justify-center items-center text-center px-6">
+            <div className="text-white z-10 space-y-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold drop-shadow-lg">
+                Services
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto">
+              Learn Various Modalities of Healing Learn in-depth about the
+              deeper sciences of energy and implement their superpowers in your
+              life.
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
 
            {/* Back button  */}
-           <div className="w-full px-4 sm:px-6 lg:px-8 mb-4">
+           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="w-full px-4 sm:px-6 lg:px-8 mt-5">
                   <h3 className="text-center sm:text-left text-black text-base sm:text-lg font-medium">
                     <Link
                       to="/"
@@ -47,7 +66,7 @@ const ServiceCard = () => {
                 </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8 ">
+        <div className="flex flex-wrap justify-center gap-4 mt-5 ">
           {filterOptions.map((option) => (
             <button
               key={option}
@@ -64,7 +83,7 @@ const ServiceCard = () => {
         </div>
 
         {/* Animated Service Cards */}
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
