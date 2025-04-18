@@ -84,7 +84,7 @@ const Banner = () => {
                 <img
                   src={singing}
                   alt="Testimonial"
-                  className="w-full max-w-[250px] object-contain"
+                  className="w-full max-w-[250px] object-contain rounded-xl"
                 />
                 <div className="max-w-xl text-center lg:text-left">
                   <h2 className="text-2xl sm:text-2xl font-semibold text-black mb-4 leading-snug">
@@ -107,7 +107,7 @@ const Banner = () => {
                 <img
                   src={yoga}
                   alt="Testimonial"
-                  className="w-full max-w-[250px] object-contain mb-5"
+                  className="w-full max-w-[250px] object-contain rounded-xl mb-5"
                 />
                 <div className="max-w-xl text-center lg:text-left">
                   <h2 className="text-2xl sm:text-2xl font-semibold text-black mb-4 leading-snug">
@@ -200,7 +200,7 @@ const Banner = () => {
 
         {/* course etc */}
         <div
-          className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
+          className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover "
           style={{ backgroundImage: `url(${courseBanner})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 rounded-b-xl"></div>
@@ -217,7 +217,8 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="py-5 px-6 sm:px-10 lg:px-20 text-center">
+
+        <div className="py-5 px-6 sm:px-10 lg:px-20 text-center bg-gray-100">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {/* Card 1 */}
             <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
@@ -291,98 +292,7 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* services etc */}
-        <div
-          className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
-          style={{ backgroundImage: `url(${serviceBanner})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30 rounded-b-xl"></div>
-          <div className="absolute inset-0 flex justify-center items-center text-center px-6">
-            <div className="text-white z-10 space-y-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold drop-shadow-lg">
-                Services
-              </h1>
-              <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto">
-                Learn Various Modalities of Healing Learn in-depth about the
-                deeper sciences of energy and implement their superpowers in
-                your life.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="py-5 px-6 sm:px-10 lg:px-20 text-center">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-            {/* Card 1 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={reiki}
-                alt="Reiki"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Reiki Level -1, 2, 3 & 4
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Healing | Duration: 4 Weeks`}</p>
-                <p className="text-gray-700 text-sm">
-                  Comprehensive Reiki training covering all four levels of
-                  healing energy work.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={ho}
-                alt="Ho’oponopono"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Ho’oponopono Basic & Advanced
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Spiritual | Duration: 2 Days`}</p>
-                <p className="text-gray-700 text-sm">
-                  Ancient Hawaiian practice for reconciliation and forgiveness,
-                  taught in both basic and advanced levels.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={law}
-                alt="Law of Attraction"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Law of Attraction – Advanced Manifestation
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Mental | Duration: 1 Week`}</p>
-                <p className="text-gray-700 text-sm">
-                  Master powerful techniques to manifest desires using the Law
-                  of Attraction.
-                </p>
-              </div>
-            </div>
-
-            {/* View More Card */}
-            <Link
-              to="/services"
-              className="bg-purple-100 border-2 border-dashed border-purple-300 rounded-2xl flex items-center justify-center text-purple-700 hover:bg-purple-200 transition cursor-pointer"
-            >
-              <div className="text-center p-4">
-                <h3 className="text-lg font-semibold">View More Courses</h3>
-                <p className="text-sm">
-                  Explore all our healing, mental & spiritual courses
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
+        
 
         {/*Page Layout divs  */}
       </div>

@@ -3,6 +3,7 @@ import { healings } from "../Data/HealingData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import healingBanner from "../Assets/about/healingBanner.png";
+import SocialMedia from "../Components/SocialMedia";
 
 const filterOptions = ["All", "Energy", "Sound", "Mental", "Divine", "Crystal"];
 
@@ -55,7 +56,7 @@ const HealingCard = () => {
 
         {/* Filter Buttons */}
 
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-5">
           {filterOptions.map((option) => (
             <button
               key={option}
@@ -72,7 +73,7 @@ const HealingCard = () => {
         </div>
 
         {/* Healing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           <AnimatePresence>
             {filteredHealings.map((healing, index) => (
               <motion.div
@@ -100,6 +101,7 @@ const HealingCard = () => {
           </AnimatePresence>
         </div>
       </div>
+      <SocialMedia/>
     </div>
   );
 };

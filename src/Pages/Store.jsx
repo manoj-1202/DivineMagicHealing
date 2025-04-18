@@ -2,6 +2,7 @@ import { products } from "../Data/StoreData";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import storeBanner from "../Assets/about/storeBanner.png";
+import SocialMedia from "../Components/SocialMedia";
 
 const Store = () => {
   return (
@@ -80,6 +81,8 @@ const Store = () => {
           </AnimatePresence>
         </div>
       </div>
+
+      <SocialMedia/>
     </div>
   );
 };

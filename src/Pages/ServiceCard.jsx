@@ -3,6 +3,7 @@ import { services } from "../Data/ServicesData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import serviceBanner from "../Assets/about/serviceBanner.png";
+import SocialMedia from "../Components/SocialMedia";
 
 const filterOptions = [
   "All",
@@ -113,6 +114,8 @@ const ServiceCard = () => {
           </AnimatePresence>
         </div>
       </div>
+
+      <SocialMedia/>
     </div>
   );
 };

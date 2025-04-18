@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { coursesData } from "../Data/CoursesData";
 import { motion, AnimatePresence } from "framer-motion";
 import courseBanner from "../Assets/about/courseBanner.png";
+import SocialMedia from "../Components/SocialMedia";
 
 const filterOptions = ["All", "Healing", "Spiritual", "Mental"];
 
@@ -55,7 +56,7 @@ const Courses = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-5">
           {filterOptions.map((option) => (
             <button
               key={option}
@@ -72,7 +73,7 @@ const Courses = () => {
         </div>
 
         {/* Course Cards with Animation */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           <AnimatePresence mode="wait">
             {filteredCourses.map((course, idx) => (
               <motion.div
@@ -117,6 +118,7 @@ const Courses = () => {
           </AnimatePresence>
         </div>
       </div>
+      <SocialMedia/>
     </div>
   );
 };
