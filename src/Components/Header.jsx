@@ -94,8 +94,8 @@ const Header = () => {
 
   return (
     <div className="w-full font-title sticky top-0 z-50">
-  <header className="bg-gray-200 shadow-lg relative z-50 font-title">
-    <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+  <header className="bg-gray-200 max-w-[1300px] mx-auto">
+    <div className=" px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
       {/* Logo */}
       <NavLink to="/" className="block w-[140px] sm:w-[160px]">
         <img
@@ -130,6 +130,9 @@ const Header = () => {
         </NavLink>
         <NavLink to="/contact" className={linkClass}>
           Contact
+        </NavLink>
+        <NavLink to="/adminDashboard" className={linkClass}>
+          Admin
         </NavLink>
       </nav>
 
@@ -226,6 +229,9 @@ const Header = () => {
               </NavLink>
               <NavLink to="/contact" className={linkClass} onClick={toggleMenu}>
                 Contact
+              </NavLink>
+              <NavLink to="/adminDashboard" className={linkClass} onClick={toggleMenu}>
+                Admin
               </NavLink>
             </nav>
           </motion.div>
