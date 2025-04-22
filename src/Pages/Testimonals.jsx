@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import videoBanner from "../Assets/about/videoBanner.png";
 import testiBanner from "../Assets/about/testiBanner.png";
 import serviceBanner from "../Assets/about/serviceBanner.png";
+import { services } from "../Data/ServicesData";
 import { Link } from "react-router-dom";
 
 import reiki from "../Assets/courses/Reiki.jpg";
@@ -180,79 +181,29 @@ const Testimonals = () => {
           </div>
         </div>
 
-        <div className="py-5 px-6 sm:px-10 lg:px-20 text-center bg-gray-100">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-            {/* Card 1 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={reiki}
-                alt="Reiki"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Reiki Level -1, 2, 3 & 4
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Healing | Duration: 4 Weeks`}</p>
-                <p className="text-gray-700 text-sm">
-                  Comprehensive Reiki training covering all four levels of
-                  healing energy work.
-                </p>
-              </div>
+        <div className="snap-x flex overflow-x-auto scrollbar-hide  space-x-4 py-5 px-6 sm:px-10 lg:px-20 text-center bg-gray-100">
+              {services.map((services, index) => (
+                <div
+                  key={index}
+                  className="snap-start min-w-[250px] min-h-[auto] bg-white rounded-lg shadow-md overflow-hidden"
+                >
+                  <img
+                    src={services.image}
+                    alt={services.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-gray-800">{services.title}</h3>
+                    <p className="text-sm text-gray-500">{services.category}</p>
+                    <p className="text-sm text-gray-600 mt-1">{services.duration}</p>
+                    <p className="text-sm text-gray-700 mt-2 line-clamp-3">{services.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={ho}
-                alt="Ho’oponopono"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Ho’oponopono Basic & Advanced
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Spiritual | Duration: 2 Days`}</p>
-                <p className="text-gray-700 text-sm">
-                  Ancient Hawaiian practice for reconciliation and forgiveness,
-                  taught in both basic and advanced levels.
-                </p>
-              </div>
-            </div>
 
-            {/* Card 3 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={law}
-                alt="Law of Attraction"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Law of Attraction – Advanced Manifestation
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Mental | Duration: 1 Week`}</p>
-                <p className="text-gray-700 text-sm">
-                  Master powerful techniques to manifest desires using the Law
-                  of Attraction.
-                </p>
-              </div>
-            </div>
 
-            {/* View More Card */}
-            <Link
-              to="/services"
-              className="bg-purple-100 border-2 border-dashed border-purple-300 rounded-2xl flex items-center justify-center text-purple-700 hover:bg-purple-200 transition cursor-pointer"
-            >
-              <div className="text-center p-4">
-                <h3 className="text-lg font-semibold">View More Courses</h3>
-                <p className="text-sm">
-                  Explore all our healing, mental & spiritual courses
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
         </div>
       </div>
 
@@ -303,7 +254,7 @@ const Testimonals = () => {
                   slidesPerView: 3,
                 },
               }}
-              className="testimonial-slider"
+              className="testimonial-slider "
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide

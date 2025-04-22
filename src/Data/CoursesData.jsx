@@ -23,7 +23,7 @@ export const coursesData = [
     image: ho,
   },
   {
-    title: 'Law of Attraction – Advanced Manifestation Technique',
+    title: 'Law of Attraction&Manifestation Technique',
     category: 'Mental',
     duration: '1 Week',
     description: 'Master powerful techniques to manifest desires using the Law of Attraction.',

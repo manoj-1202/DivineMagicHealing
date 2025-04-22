@@ -19,6 +19,8 @@ import ServiceCard from './Pages/ServiceCard';
 import HealingCard from './Pages/HealingCard';
 import SocialMedia from './Components/SocialMedia';
 import AdminDashboard from './Dashboards/AdminDashboard';
+import AdminAuth from './Auth/AdminAuth';
+import AuthPage from './Auth/AuthPage';
 
 
 
@@ -44,6 +46,12 @@ function App() {
         <Route path="/services" element={<ServiceCard/>} />
         <Route path="/socialMedia" element={<SocialMedia/>} />
         <Route path="/adminDashboard" element={<AdminDashboard/>} />
+ 
+
+        {/* Auth */}
+        <Route path="/adminAuth" element={<AdminAuth/>} />
+
+        <Route path="/auth" element={<AuthPage/>} />
      
 
 

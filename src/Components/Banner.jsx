@@ -3,11 +3,9 @@ import shaman from "../Assets/banner/shaman.jpg";
 import healing from "../Assets/banner/healing.jpg";
 import yoga from "../Assets/banner/yoga.jpg";
 import singing from "../Assets/banner/singing.jpg";
-import reiki from "../Assets/courses/Reiki.jpg";
-import ho from "../Assets/courses/Ho.jpg";
-import law from "../Assets/courses/Law.jpg";
+import { coursesData } from "../Data/CoursesData";
 import courseBanner from "../Assets/about/courseBanner.png";
-import serviceBanner from "../Assets/about/serviceBanner.png";
+
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -58,7 +56,7 @@ const Banner = () => {
         {/* Real Stories & Real Transformations. */}
 
         <div
-          className="w-full bg-cover bg-center bg-no-repeat relative"
+          className="w-full bg-cover bg-center bg-no-repeat relative "
           style={{ backgroundImage: `url(${shaman})` }}
         >
           {/* Overlay for better text readability */}
@@ -66,8 +64,8 @@ const Banner = () => {
 
           <div className="relative z-10">
             {/* Intro Section */}
-            <div className="flex justify-center px-4 sm:px-6 lg:px-20 py-2">
-            <div className="bg-gray-200 shadow-lg rounded-3xl p-5 text-center max-w-4xl mx-auto border border-gray-200">
+            <div className="flex justify-center px-4 sm:px-6 lg:px-20 py-2 ">
+              <div className="bg-gray-200 shadow-lg rounded-3xl p-5 text-center max-w-4xl mx-auto border border-gray-200 mt-5">
                 <h2 className="text-3xl sm:text-3xl font-bold text-black mb-4">
                   Real Stories & Real Transformations.
                 </h2>
@@ -134,7 +132,7 @@ const Banner = () => {
           {/* Page Heading */}
           <div className="flex justify-center px-4 sm:px-6 lg:px-20 py-2">
             <div className="bg-gray-200 shadow-lg rounded-3xl p-5 text-center max-w-4xl mx-auto border border-gray-200">
-            <h2 className="text-3xl sm:text-3xl font-bold text-black mb-4">
+              <h2 className="text-3xl sm:text-3xl font-bold text-black mb-4">
                 Step Into a World of Inner Peace & Healing
               </h2>
               <p className="text-lg sm:text-xl text-gray-600">
@@ -218,82 +216,26 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="py-5 px-6 sm:px-10 lg:px-20 text-center bg-gray-100">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-            {/* Card 1 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={reiki}
-                alt="Reiki"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Reiki Level -1, 2, 3 & 4
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Healing | Duration: 4 Weeks`}</p>
-                <p className="text-gray-700 text-sm">
-                  Comprehensive Reiki training covering all four levels of
-                  healing energy work.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={ho}
-                alt="Ho’oponopono"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Ho’oponopono Basic & Advanced
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Spiritual | Duration: 2 Days`}</p>
-                <p className="text-gray-700 text-sm">
-                  Ancient Hawaiian practice for reconciliation and forgiveness,
-                  taught in both basic and advanced levels.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={law}
-                alt="Law of Attraction"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-black">
-                  Law of Attraction – Advanced Manifestation
-                </h3>
-                <p className="text-sm text-gray-500">{`Category: Mental | Duration: 1 Week`}</p>
-                <p className="text-gray-700 text-sm">
-                  Master powerful techniques to manifest desires using the Law
-                  of Attraction.
-                </p>
-              </div>
-            </div>
-
-            {/* View More Card */}
-            <Link
-              to="/courses"
-              className="bg-purple-100 border-2 border-dashed border-purple-300 rounded-2xl flex items-center justify-center text-purple-700 hover:bg-purple-200 transition cursor-pointer"
-            >
-              <div className="text-center p-4">
-                <h3 className="text-lg font-semibold">View More Courses</h3>
-                <p className="text-sm">
-                  Explore all our healing, mental & spiritual courses
-                </p>
-              </div>
-            </Link>
+        <div className="snap-x flex overflow-x-auto scrollbar-hide space-x-4 py-5 px-6 sm:px-10 lg:px-20 text-center bg-gray-100">
+      {coursesData.map((course, index) => (
+        <div
+          key={index}
+          className="snap-start min-w-[250px] min-h-[auto] bg-white rounded-lg shadow-md overflow-hidden"
+        >
+          <img
+            src={course.image}
+            alt={course.title}
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-4">
+            <h3 className="text-lg font-semibold text-gray-800">{course.title}</h3>
+            <p className="text-sm text-gray-500">{course.category}</p>
+            <p className="text-sm text-gray-600 mt-1">{course.duration}</p>
+            <p className="text-sm text-gray-700 mt-2 line-clamp-3">{course.description}</p>
           </div>
         </div>
-
-        
-
+      ))}
+    </div>
         {/*Page Layout divs  */}
       </div>
     </div>
