@@ -91,7 +91,7 @@ const Header = () => {
 
   return (
     <div className="w-full font-title sticky top-0 z-50">
-      <header className="bg-gray-200 max-w-[1300px] mx-auto">
+      <header className="bg-gradient-to-r from-gray-400 via-gray-300 to-gray-200  max-w-[1300px] mx-auto">
         <div className=" px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           {/* Logo */}
           <NavLink to="/" className="block w-[140px] sm:w-[160px]">
