@@ -217,25 +217,39 @@ const Banner = () => {
         </div>
 
         <div className="snap-x flex overflow-x-auto scrollbar-hide space-x-4 py-5 px-6 sm:px-10 lg:px-20 text-center bg-gray-100">
-      {coursesData.map((course, index) => (
-        <div
-          key={index}
-          className="snap-start min-w-[250px] min-h-[auto] bg-white rounded-lg shadow-md overflow-hidden"
-        >
-          <img
-            src={course.image}
-            alt={course.title}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold text-gray-800">{course.title}</h3>
-            <p className="text-sm text-gray-500">{course.category}</p>
-            <p className="text-sm text-gray-600 mt-1">{course.duration}</p>
-            <p className="text-sm text-gray-700 mt-2 line-clamp-3">{course.description}</p>
-          </div>
+          {coursesData.map((course, index) => (
+           <div
+           key={index}
+           className="snap-start min-w-[250px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between"
+         >
+           <img
+             src={course.image}
+             alt={course.title}
+             className="w-full h-48 object-cover"
+           />
+           <div className="p-4 flex flex-col flex-grow justify-between">
+             <div>
+               <h3 className="text-lg font-semibold text-gray-800">{course.title}</h3>
+               <p className="text-sm text-gray-500">{course.category}</p>
+               <p className="text-sm text-gray-600 mt-1">{course.duration}</p>
+               <p className="text-sm text-gray-700 mt-2 line-clamp-3">
+                 {course.description}
+               </p>
+             </div>
+             <div className="mt-4">
+               <Link
+                 to={`/courses/${course.title.toLowerCase().replace(/\s+/g, "-")}`}
+               >
+                 <button className="w-full bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300">
+                   Book Now
+                 </button>
+               </Link>
+             </div>
+           </div>
+         </div>
+         
+          ))}
         </div>
-      ))}
-    </div>
         {/*Page Layout divs  */}
       </div>
     </div>

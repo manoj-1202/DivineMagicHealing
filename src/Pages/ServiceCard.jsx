@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { services } from "../Data/ServicesData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -26,12 +26,15 @@ const ServiceCard = () => {
       ? services
       : services.filter((service) => service.category === selectedFilter);
 
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   return (
     <div className="w-full bg-gray-100 border-t font-title">
-        
-        {/* Services banner */}
-    <div className="max-w-[1300px] mx-auto">
-    <div
+      {/* Services banner */}
+      <div className="max-w-[1300px] mx-auto">
+        <div
           className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
           style={{ backgroundImage: `url(${serviceBanner})` }}
         >
@@ -42,29 +45,29 @@ const ServiceCard = () => {
                 Services
               </h1>
               <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto">
-              Learn Various Modalities of Healing Learn in-depth about the
-              deeper sciences of energy and implement their superpowers in your
-              life.
+                Learn Various Modalities of Healing Learn in-depth about the
+                deeper sciences of energy and implement their superpowers in
+                your life.
               </p>
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
-           {/* Back button  */}
-           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="w-full px-4 sm:px-6 lg:px-8 mt-5">
-                  <h3 className="text-center sm:text-left text-black text-base sm:text-lg font-medium">
-                    <Link
-                      to="/"
-                      className="hover:underline hover:text-gray-500 transition-colors duration-200"
-                    >
-                      Home
-                    </Link>
-                    <span className="mx-2">|</span>
-                    <span className="text-gray-500">Services</span>
-                  </h3>
-                </div>
+      {/* Back button  */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8 mt-5">
+          <h3 className="text-center sm:text-left text-black text-base sm:text-lg font-medium">
+            <Link
+              to="/"
+              className="hover:underline hover:text-gray-500 transition-colors duration-200"
+            >
+              Home
+            </Link>
+            <span className="mx-2">|</span>
+            <span className="text-gray-500">Services</span>
+          </h3>
+        </div>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-5 ">
@@ -74,7 +77,7 @@ const ServiceCard = () => {
               onClick={() => setSelectedFilter(option)}
               className={`px-4 py-2 rounded-full border transition ${
                 selectedFilter === option
-                 ? "bg-purple-600 text-white"
+                  ? "bg-purple-600 text-white"
                   : "bg-white text-black border-black"
               }`}
             >
@@ -84,7 +87,7 @@ const ServiceCard = () => {
         </div>
 
         {/* Animated Service Cards */}
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
@@ -93,29 +96,42 @@ const ServiceCard = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-gray-200 p-4 rounded-2xl shadow-md hover:shadow-lg"
+                className="bg-gray-200 p-4 rounded-2xl shadow-md hover:shadow-lg flex flex-col justify-between"
               >
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-48 object-cover rounded-xl mb-4"
-                />
-                <h3 className="text-xl font-semibold text-black mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  {service.description}
-                </p>
-                <p className="text-sm text-gray-500">
-                  Duration: {service.duration}
-                </p>
+                <div>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover rounded-xl mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-black mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    {service.description}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Duration: {service.duration}
+                  </p>
+                </div>
+
+                <Link
+                  to={`/services/${service.title
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                  className="mt-4"
+                >
+                  <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 w-full">
+                    Book Now
+                  </button>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
       </div>
 
-      <SocialMedia/>
+      <SocialMedia />
     </div>
   );
 };

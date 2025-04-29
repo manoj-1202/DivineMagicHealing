@@ -1,7 +1,12 @@
 import { Mail, Phone, Contact } from "lucide-react";
 import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+
 
 const ContactPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full bg-gray-100 py-12 border-t font-title">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,9 +1,65 @@
-import yoga from "../Assets/banner/yoga.jpg";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import accountBg from "../Assets/account/accountBg.jpg";
-import { useState } from "react";
+import yoga from "../Assets/banner/yoga.jpg";
 
 const AuthPage = () => {
   const [isSignup, setIsSignup] = useState(true);
+  const navigate = useNavigate();
+
+  // State for form inputs
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (isSignup && password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    try {
+      if (isSignup) {
+        const response = await fetch("http://localhost:5000/api/auth/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, password }),
+        });
+
+        const result = await response.json();
+        if (response.status === 201) {
+          alert(result.message);
+          navigate('/auth');
+        } else {
+          alert(result.error || "Signup failed");
+        }
+      } else {
+        const response = await fetch("http://localhost:5000/api/auth/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const result = await response.json();
+        if (response.status === 200) {
+          alert("Login successful");
+          navigate('/');
+        } else {
+          alert(result.error || "Login failed");
+        }
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Something went wrong!");
+    }
+  };
 
   return (
     <div
@@ -11,7 +67,6 @@ const AuthPage = () => {
       style={{ backgroundImage: `url(${accountBg})` }}
     >
       <div className="flex w-full max-w-4xl rounded-lg overflow-hidden bg-white/10 backdrop-blur-md shadow-1xl">
-        {/* Left Form Section */}
         <div className="w-full md:w-1/2 p-10 bg-white/20 backdrop-blur-md">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             {isSignup ? "Create an account" : "Sign in to your account"}
@@ -22,13 +77,15 @@ const AuthPage = () => {
               : "Access your account by signing in below."}
           </p>
 
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             {isSignup && (
               <div>
                 <label className="block text-gray-700 mb-1">Your name</label>
                 <input
                   type="text"
                   placeholder="First Last"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
@@ -38,6 +95,8 @@ const AuthPage = () => {
               <input
                 type="email"
                 placeholder="you@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
@@ -46,17 +105,19 @@ const AuthPage = () => {
               <input
                 type="password"
                 placeholder="********"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
             {isSignup && (
               <div>
-                <label className="block text-gray-700 mb-1">
-                  Confirm Password
-                </label>
+                <label className="block text-gray-700 mb-1">Confirm Password</label>
                 <input
                   type="password"
                   placeholder="********"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
@@ -92,7 +153,6 @@ const AuthPage = () => {
           </div>
         </div>
 
-        {/* Right Image Section */}
         <div className="hidden md:flex md:w-1/2 items-center justify-center bg-white/20 backdrop-blur-md p-6">
           <img
             src={yoga}

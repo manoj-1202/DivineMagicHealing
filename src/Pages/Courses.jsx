@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { coursesData } from "../Data/CoursesData";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,12 +15,15 @@ const Courses = () => {
       ? coursesData
       : coursesData.filter((course) => course.category === selectedFilter);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="w-full bg-gray-100  font-title">
-
-    {/* course banner */}
-    <div className="max-w-[1300px] mx-auto">
-    <div
+      {/* course banner */}
+      <div className="max-w-[1300px] mx-auto">
+        <div
           className="relative w-full h-[250px] sm:h-[200px] lg:h-[200px] bg-center bg-cover"
           style={{ backgroundImage: `url(${courseBanner})` }}
         >
@@ -31,14 +34,14 @@ const Courses = () => {
                 Courses
               </h1>
               <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto">
-              Learn Various Modalities of Healing Learn in-depth about the
-              deeper sciences of energy and implement their superpowers in your
-              life.
+                Learn Various Modalities of Healing Learn in-depth about the
+                deeper sciences of energy and implement their superpowers in
+                your life.
               </p>
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back button */}
@@ -83,32 +86,32 @@ const Courses = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-gray-200 p-4  rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-200 p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between"
               >
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-48 object-cover rounded-xl mb-4"
-                />
-                <h2 className="text-xl font-bold  text-black mb-2">
-                  {course.title}
-                </h2>
-                <p className="text-gray-600 text-sm mb-2">
-                  Duration: {course.duration}
-                </p>
-                <p className="text-gray-700 text-sm line-clamp-3 mb-4">
-                  {course.description}
-                </p>
-                <div className="flex justify-between">
-                  <span className="text-sm font-medium text-blue-500 hover:underline">
-                    View Details
-                  </span>
+                <div>
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-48 object-cover rounded-xl mb-4"
+                  />
+                  <h2 className="text-xl font-bold text-black mb-2">
+                    {course.title}
+                  </h2>
+                  <p className="text-gray-600 text-sm mb-2">
+                    Duration: {course.duration}
+                  </p>
+                  <p className="text-gray-700 text-sm line-clamp-3 mb-4">
+                    {course.description}
+                  </p>
+                </div>
+
+                <div className="mt-auto">
                   <Link
-                    to={`/courseBooking/${course.title
-                      .replace(/ /g, "-")
-                      .toLowerCase()}`}
+                    to={`/courses/${course.title
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
                   >
-                    <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-400">
+                    <button className="bg-purple-600 text-white w-full py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300">
                       Book Now
                     </button>
                   </Link>
@@ -118,7 +121,7 @@ const Courses = () => {
           </AnimatePresence>
         </div>
       </div>
-      <SocialMedia/>
+      <SocialMedia />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-import account from "../Assets/account/account.png";
+// import account from "../Assets/account/account.png";
 import logo from "../Assets/logo.png";
 
 const Header = () => {
@@ -21,11 +21,7 @@ const Header = () => {
   const handleMouseEnter = (menu) => setHoveredMenu(menu);
   const handleMouseLeave = () => setHoveredMenu(null);
 
-  const toggleDropdown = (menu) => {
-    setDropdownOpen((prev) => ({
-      [menu]: !prev[menu], // only keep one open
-    }));
-  };
+
 
   const linkClass = ({ isActive }) =>
     `relative text-lg md:text-xl lg:text-2xl transition-all duration-200 pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-purple-900 hover:after:w-full after:transition-all after:duration-300 ${
@@ -68,27 +64,27 @@ const Header = () => {
 
   const menuItems = {
     services: [
-      { label: "Pregnancy Healing", to: "/services" },
-      { label: "Negative Cords Cutting", to: "/services" },
-      { label: "Meditation", to: "/services" },
+      { label: "Pregnancy Healing", to: "/services/pregnancy-healing" },
+      { label: "Negative Cords Cutting", to: "/services/negative-cords-cutting" },
+      { label: "Meditation", to: "/services/meditation" },
       { label: "More...", to: "/services" },
     ],
     courses: [
-      { label: "Reiki Level 1,2,3&4", to: "/courses" },
-      { label: "Ho’oponopono Basic & Advanced", to: "/courses" },
-      { label: "Gratitude Journal Workshop (JoyShop)", to: "/courses" },
+      { label: "Reiki Level 1,2,3&4", to: "/courses/reiki-level--1,-2,-3-&-4" },
+      { label: "Ho’oponopono Basic & Advanced", to: "/courses/ho’oponopono-basic-&-advanced" },
+      { label: "Gratitude Journal Workshop (JoyShop)", to: "/courses/gratitude-journal-workshop-(joyshop)" },
       { label: "More...", to: "/courses" },
     ],
     healing: [
-      { label: "Reiki Healing", to: "/healingCard" },
-      { label: "Advanced Ho’ oponopono Healing", to: "/healingCard" },
-      { label: "Crystal Healing", to: "/healingCard" },
+      { label: "Reiki Healing", to: "/healings/reiki-healing" },
+      { label: "Advanced Ho’ oponopono Healing", to: "/healings/advanced-ho’-oponopono-healing" },
+      { label: "Crystal Healing", to: "/healings/crystal-healing" },
       { label: "More...", to: "/healingCard" },
     ],
     store: [
-      { label: "Reiki Healing Crystal", to: "/store" },
-      { label: "Aura Cleansing Spray", to: "/store" },
-      { label: "Chakra Balancing Bracelet", to: "/store" },
+      { label: "Reiki Healing Crystal", to: "/Products/reiki-healing-crystal" },
+      { label: "Aura Cleansing Spray", to: "/Products/aura-cleansing-spray" },
+      { label: "Chakra Balancing Bracelet", to: "/Products/chakra-balancing-bracelet" },
       { label: "More...", to: "/store" },
     ],
   };
@@ -132,9 +128,9 @@ const Header = () => {
             <NavLink to="/contact" className={linkClass}>
               Contact
             </NavLink>
-            <NavLink to="/auth" className={linkClass}>
+            {/* <NavLink to="/auth" className={linkClass}>
               <img src={account} alt="Account Icon" className="w-6 h-6" />
-            </NavLink>
+            </NavLink> */}
           </nav>
 
           {/* Mobile Toggle */}
@@ -178,7 +174,7 @@ const Header = () => {
                 className="md:hidden fixed top-0 right-0 w-64 h-full bg-gray-100 shadow-lg z-50 px-4 py-6 overflow-y-auto"
               >
                 <nav className="flex flex-col space-y-4 font-bold">
-                  <NavLink
+                  {/* <NavLink
                     to="/auth"
                     className={linkClass}
                     onClick={toggleMenu}
@@ -191,7 +187,7 @@ const Header = () => {
                       />
                       <span>My Account</span>
                     </div>
-                  </NavLink>
+                  </NavLink> */}
 
                   <NavLink to="/" className={linkClass} onClick={toggleMenu}>
                     Home

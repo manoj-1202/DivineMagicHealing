@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { products } from "../Data/StoreData";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,6 +14,10 @@ const Store = () => {
     selectedFilter === "All"
       ? products
       : products.filter((product) => product.category === selectedFilter);
+
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
   return (
     <div className="w-full bg-gray-100 font-title">
@@ -52,22 +56,23 @@ const Store = () => {
             <span className="mx-2">|</span>
             <span className="text-gray-500">Store</span>
           </h3>
-          {/* Filter Buttons */}
-          <div className="flex space-x-2 overflow-x-auto scrollbar-hide">
-            {filterOptions.map((option) => (
-              <button
-                key={option}
-                onClick={() => setSelectedFilter(option)}
-                className={`px-4 py-2 rounded-full border transition ${
-                  selectedFilter === option
-                   ? "bg-purple-600 text-white"
+        </div>
+
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mt-5">
+          {filterOptions.map((option) => (
+            <button
+              key={option}
+              onClick={() => setSelectedFilter(option)}
+              className={`px-4 py-2 rounded-full border transition ${
+                selectedFilter === option
+                  ? "bg-purple-600 text-white"
                   : "bg-white text-black border-black"
-                }`}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
+              }`}
+            >
+              {option}
+            </button>
+          ))}
         </div>
 
         {/* Products Grid */}
@@ -92,13 +97,19 @@ const Store = () => {
                     {product.name}
                   </h3>
                   <p className="text-gray-600 mb-2">{product.description}</p>
-                  <p className="text-sm text-gray-500 mb-2">{product.category}</p>
+                  <p className="text-sm text-gray-500 mb-2">
+                    {product.category}
+                  </p>
                   <div className="text-lg font-bold text-green-600 mb-4">
                     {product.price}
                   </div>
-                  <Link to={`/Product/${product.id}`}>
-                    <button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-600 transition-colors duration-300">
-                      Buy Now
+                  <Link
+                    to={`/products/${product.name
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                  >
+                    <button className="mt-2 w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 rounded-xl transition-colors duration-300">
+                      Book Now
                     </button>
                   </Link>
                 </motion.div>

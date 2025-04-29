@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { healings } from "../Data/HealingData";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -14,6 +14,10 @@ const HealingCard = () => {
     selectedCategory === "All"
       ? healings
       : healings.filter((h) => h.category === selectedCategory);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="w-full bg-gray-100  font-title">
@@ -82,26 +86,40 @@ const HealingCard = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-gray-200 p-4  rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-200 p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between"
               >
-                <img
-                  src={healing.image}
-                  alt={healing.title}
-                  className="w-full h-48 object-cover rounded-xl mb-4"
-                />
-                <h3 className="text-xl font-semibold text-black mb-2">
-                  {healing.title}
-                </h3>
-                <p className="text-gray-600 mb-3">{healing.description}</p>
-                <span className="inline-block text-sm text-white bg-purple-500 px-3 py-1 rounded-full">
-                  {healing.duration}
-                </span>
+                <div>
+                  <img
+                    src={healing.image}
+                    alt={healing.title}
+                    className="w-full h-48 object-cover rounded-xl mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-black mb-2">
+                    {healing.title}
+                  </h3>
+                  <p className="text-gray-600 mb-3">{healing.description}</p>
+                  <span className="inline-block text-sm text-white bg-purple-500 px-3 py-1 rounded-full mb-3">
+                    {healing.duration}
+                  </span>
+                </div>
+
+                <div className="mt-auto">
+                  <Link
+                    to={`/healings/${healing.title
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                  >
+                    <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 rounded-xl transition-colors duration-300">
+                      Book Now
+                    </button>
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
       </div>
-      <SocialMedia/>
+      <SocialMedia />
     </div>
   );
 };

@@ -8,7 +8,7 @@ export const products = [
     name: 'Reiki Healing Crystal',
     description: 'A powerful crystal infused with Reiki energy for daily balance.',
     image: cristal,
-    price: '₹499',
+    price: 499,
     category: 'Healing',
   },
   {
@@ -16,7 +16,7 @@ export const products = [
     name: 'Aura Cleansing Spray',
     description: 'Natural essential oil blend to refresh your aura and space.',
     image: spray,
-    price: '₹299',
+    price: 299,
     category: 'Spiritual',
   },
   {
@@ -24,7 +24,7 @@ export const products = [
     name: 'Chakra Balancing Bracelet',
     description: 'Handcrafted with natural stones aligned to all 7 chakras.',
     image: bracelet,
-    price: '₹399',
+    price: 399,
     category: 'Accessories',
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     name: 'Amethyst Energy Stone',
     description: 'Promotes calmness and spiritual growth with vibrant purple hues.',
     image: 'https://picsum.photos/300/200?random=4',
-    price: '₹599',
+    price: 599,
     category: 'Healing',
   },
   {
@@ -40,7 +40,7 @@ export const products = [
     name: 'Rose Quartz Pendant',
     description: 'Attracts love and harmony with this heart-shaped pendant.',
     image: 'https://picsum.photos/300/200?random=5',
-    price: '₹349',
+    price: 349,
     category: 'Accessories',
   },
   {
@@ -48,7 +48,7 @@ export const products = [
     name: 'Selenite Wand',
     description: 'Cleanses negative energy and enhances mental clarity.',
     image: 'https://picsum.photos/300/200?random=6',
-    price: '₹450',
+    price: 450,
     category: 'Spiritual',
   },
   {
@@ -56,7 +56,7 @@ export const products = [
     name: 'Citrine Prosperity Crystal',
     description: 'Boosts abundance and positivity with its sunny glow.',
     image: 'https://picsum.photos/300/200?random=7',
-    price: '₹529',
+    price: 529,
     category: 'Healing',
   },
   {
@@ -64,7 +64,7 @@ export const products = [
     name: 'Lavender Aromatherapy Oil',
     description: 'Soothes the mind and body with calming lavender essence.',
     image: 'https://picsum.photos/300/200?random=8',
-    price: '₹249',
+    price: 249,
     category: 'Healing',
   },
   {
@@ -72,7 +72,7 @@ export const products = [
     name: 'Tiger Eye Bracelet',
     description: 'Enhances courage and protection with earthy tones.',
     image: 'https://picsum.photos/300/200?random=9',
-    price: '₹399',
+    price: 399,
     category: 'Accessories',
   },
   {
@@ -80,7 +80,7 @@ export const products = [
     name: 'Black Tourmaline Stone',
     description: 'Shields against negative energies and promotes grounding.',
     image: 'https://picsum.photos/300/200?random=10',
-    price: '₹479',
+    price: 479,
     category: 'Healing',
   },
   {
@@ -88,7 +88,7 @@ export const products = [
     name: 'Moonstone Necklace',
     description: 'Connects with lunar energy for emotional balance.',
     image: 'https://picsum.photos/300/200?random=11',
-    price: '₹649',
+    price: 649,
     category: 'Accessories',
   },
   {
@@ -96,7 +96,7 @@ export const products = [
     name: 'Sage Smudging Kit',
     description: 'Purifies spaces with traditional sage and accessories.',
     image: 'https://picsum.photos/300/200?random=12',
-    price: '₹399',
+    price: 399,
     category: 'Spiritual',
   },
   {
@@ -104,7 +104,7 @@ export const products = [
     name: 'Lapis Lazuli Crystal',
     description: 'Enhances wisdom and inner truth with deep blue sparkle.',
     image: 'https://picsum.photos/300/200?random=13',
-    price: '₹569',
+    price: 569,
     category: 'Healing',
   },
   {
@@ -112,7 +112,7 @@ export const products = [
     name: 'Jade Harmony Stone',
     description: 'Brings luck and peace with its soothing green color.',
     image: 'https://picsum.photos/300/200?random=14',
-    price: '₹499',
+    price: 499,
     category: 'Healing',
   },
   {
@@ -120,7 +120,7 @@ export const products = [
     name: 'Hematite Grounding Ring',
     description: 'Stabilizes energy with sleek, metallic shine.',
     image: 'https://picsum.photos/300/200?random=15',
-    price: '₹349',
+    price: 349,
     category: 'Accessories',
   },
   {
@@ -128,7 +128,7 @@ export const products = [
     name: 'Frankincense Resin',
     description: 'Elevates meditation with its rich, sacred aroma.',
     image: 'https://picsum.photos/300/200?random=16',
-    price: '₹299',
+    price: 299,
     category: 'Spiritual',
   },
   {
@@ -136,7 +136,7 @@ export const products = [
     name: 'Aquamarine Crystal',
     description: 'Promotes tranquility and clear communication.',
     image: 'https://picsum.photos/300/200?random=17',
-    price: '₹679',
+    price: 679,
     category: 'Healing',
   },
   {
@@ -144,7 +144,7 @@ export const products = [
     name: 'Obsidian Protection Stone',
     description: 'Deflects negativity with its glossy black surface.',
     image: 'https://picsum.photos/300/200?random=18',
-    price: '₹459',
+    price: 459,
     category: 'Healing',
   },
   {
@@ -152,7 +152,7 @@ export const products = [
     name: 'Turquoise Healing Necklace',
     description: 'Supports emotional healing with vibrant blue-green tones.',
     image: 'https://picsum.photos/300/200?random=19',
-    price: '₹799',
+    price: 799,
     category: 'Accessories',
   },
   {
@@ -160,7 +160,7 @@ export const products = [
     name: 'Palo Santo Sticks',
     description: 'Clears energy with its sweet, woody scent.',
     image: 'https://picsum.photos/300/200?random=20',
-    price: '₹349',
+    price: 349,
     category: 'Spiritual',
   },
   {
@@ -168,7 +168,7 @@ export const products = [
     name: 'Fluorite Focus Crystal',
     description: 'Enhances mental clarity and decision-making.',
     image: 'https://picsum.photos/300/200?random=21',
-    price: '₹529',
+    price: 529,
     category: 'Healing',
   },
   {
@@ -176,7 +176,7 @@ export const products = [
     name: 'Garnet Passion Stone',
     description: 'Ignites creativity and passion with deep red hues.',
     image: 'https://picsum.photos/300/200?random=22',
-    price: '₹499',
+    price: 499,
     category: 'Healing',
   },
   {
@@ -184,7 +184,7 @@ export const products = [
     name: 'Aventurine Luck Bracelet',
     description: 'Attracts prosperity with its shimmering green sparkle.',
     image: 'https://picsum.photos/300/200?random=23',
-    price: '₹429',
+    price: 429,
     category: 'Accessories',
   },
   {
@@ -192,7 +192,7 @@ export const products = [
     name: 'Sandalwood Incense',
     description: 'Creates a serene atmosphere with its warm fragrance.',
     image: 'https://picsum.photos/300/200?random=24',
-    price: '₹199',
+    price: 199,
     category: 'Spiritual',
   },
   {
@@ -200,7 +200,7 @@ export const products = [
     name: 'Malachite Transformation Stone',
     description: 'Supports change and emotional growth with green patterns.',
     image: 'https://picsum.photos/300/200?random=25',
-    price: '₹649',
+    price: 649,
     category: 'Healing',
   },
   {
@@ -208,7 +208,7 @@ export const products = [
     name: 'Clear Quartz Amplifier',
     description: 'Amplifies intentions and cleanses energy fields.',
     image: 'https://picsum.photos/300/200?random=26',
-    price: '₹399',
+    price: 399,
     category: 'Healing',
   },
   {
@@ -216,7 +216,7 @@ export const products = [
     name: 'Carnelian Energy Booster',
     description: 'Boosts motivation and creativity with vibrant orange tones.',
     image: 'https://picsum.photos/300/200?random=27',
-    price: '₹469',
+    price: 469,
     category: 'Healing',
   },
   {
@@ -224,7 +224,7 @@ export const products = [
     name: 'Rhodonite Healing Crystal',
     description: 'Promotes forgiveness and emotional healing with pink hues.',
     image: 'https://picsum.photos/300/200?random=28',
-    price: '₹549',
+    price: 549,
     category: 'Healing',
   },
   {
@@ -232,7 +232,7 @@ export const products = [
     name: 'Peridot Vitality Stone',
     description: 'Enhances vitality and positivity with olive-green sparkle.',
     image: 'https://picsum.photos/300/200?random=29',
-    price: '₹579',
+    price: 579,
     category: 'Healing',
   },
   {
@@ -240,7 +240,7 @@ export const products = [
     name: 'Onyx Strength Bracelet',
     description: 'Provides strength and protection with its sleek black finish.',
     image: 'https://picsum.photos/300/200?random=30',
-    price: '₹449',
+    price: 449,
     category: 'Accessories',
   },
   {
@@ -248,7 +248,7 @@ export const products = [
     name: 'Blue Topaz Clarity Stone',
     description: 'Promotes clear thinking and communication with blue sparkle.',
     image: 'https://picsum.photos/300/200?random=31',
-    price: '₹699',
+    price: 699,
     category: 'Healing',
   },
   {
@@ -256,7 +256,7 @@ export const products = [
     name: 'Smoky Quartz Grounding Crystal',
     description: 'Grounds and detoxifies with its smoky brown tones.',
     image: 'https://picsum.photos/300/200?random=32',
-    price: '₹489',
+    price: 489,
     category: 'Healing',
   },
   {
@@ -264,7 +264,7 @@ export const products = [
     name: 'Opal Intuition Necklace',
     description: 'Enhances intuition with its iridescent glow.',
     image: 'https://picsum.photos/300/200?random=33',
-    price: '₹899',
+    price: 899,
     category: 'Accessories',
   },
   {
@@ -272,7 +272,7 @@ export const products = [
     name: 'Chrysocolla Peace Stone',
     description: 'Promotes peace and communication with blue-green patterns.',
     image: 'https://picsum.photos/300/200?random=34',
-    price: '₹619',
+    price: 619,
     category: 'Healing',
   },
   {
@@ -280,7 +280,7 @@ export const products = [
     name: 'Labradorite Mystical Crystal',
     description: 'Unlocks inner magic with its shimmering color play.',
     image: 'https://picsum.photos/300/200?random=35',
-    price: '₹559',
+    price: 559,
     category: 'Healing',
   },
   {
@@ -288,7 +288,7 @@ export const products = [
     name: 'Patchouli Meditation Oil',
     description: 'Deepens meditation with its earthy, musky scent.',
     image: 'https://picsum.photos/300/200?random=36',
-    price: '₹279',
+    price: 279,
     category: 'Spiritual',
   },
   {
@@ -296,7 +296,7 @@ export const products = [
     name: 'Howlite Calmness Stone',
     description: 'Reduces stress and promotes calm with white marbling.',
     image: 'https://picsum.photos/300/200?random=37',
-    price: '₹399',
+    price: 399,
     category: 'Healing',
   },
   {
@@ -304,7 +304,7 @@ export const products = [
     name: 'Sunstone Joy Crystal',
     description: 'Radiates joy and positivity with warm, golden sparkles.',
     image: 'https://picsum.photos/300/200?random=38',
-    price: '₹529',
+    price: 529,
     category: 'Healing',
   },
   {
@@ -312,7 +312,7 @@ export const products = [
     name: 'Agate Stability Slice',
     description: 'Promotes balance and stability with natural banded patterns.',
     image: 'https://picsum.photos/300/200?random=39',
-    price: '₹469',
+    price: 469,
     category: 'Healing',
   },
   {
@@ -320,7 +320,7 @@ export const products = [
     name: 'Eucalyptus Energy Spray',
     description: 'Refreshes spaces with invigorating eucalyptus aroma.',
     image: 'https://picsum.photos/300/200?random=40',
-    price: '₹319',
+    price: 319,
     category: 'Spiritual',
   },
   {
@@ -328,7 +328,7 @@ export const products = [
     name: 'Kyanite Alignment Crystal',
     description: 'Aligns chakras and enhances intuition with blue blades.',
     image: 'https://picsum.photos/300/200?random=41',
-    price: '₹679',
+    price: 679,
     category: 'Healing',
   },
   {
@@ -336,7 +336,7 @@ export const products = [
     name: 'Moss Agate Growth Stone',
     description: 'Supports growth and new beginnings with green inclusions.',
     image: 'https://picsum.photos/300/200?random=42',
-    price: '₹499',
+    price: 499,
     category: 'Healing',
   },
   {
@@ -344,7 +344,7 @@ export const products = [
     name: 'Ruby Passion Pendant',
     description: 'Ignites passion and vitality with its deep red glow.',
     image: 'https://picsum.photos/300/200?random=43',
-    price: '₹799',
+    price: 799,
     category: 'Accessories',
   },
   {
@@ -352,7 +352,7 @@ export const products = [
     name: 'Cedarwood Grounding Oil',
     description: 'Grounds and calms with its warm, woody scent.',
     image: 'https://picsum.photos/300/200?random=44',
-    price: '₹259',
+    price: 259,
     category: 'Spiritual',
   },
   {
@@ -360,7 +360,7 @@ export const products = [
     name: 'Apatite Inspiration Crystal',
     description: 'Boosts creativity and motivation with blue-green hues.',
     image: 'https://picsum.photos/300/200?random=45',
-    price: '₹589',
+    price: 589,
     category: 'Healing',
   },
   {
@@ -368,7 +368,7 @@ export const products = [
     name: 'Sodalite Logic Stone',
     description: 'Enhances rational thought and intuition with deep blue tones.',
     image: 'https://picsum.photos/300/200?random=46',
-    price: '₹479',
+    price:479,
     category: 'Healing',
   },
   {
@@ -376,7 +376,7 @@ export const products = [
     name: 'Angelite Serenity Stone',
     description: 'Promotes peace and angelic connection with soft blue color.',
     image: 'https://picsum.photos/300/200?random=47',
-    price: '₹549',
+    price: 549,
     category: 'Healing',
   },
   {
@@ -384,7 +384,7 @@ export const products = [
     name: 'Charoite Transformation Crystal',
     description: 'Supports spiritual transformation with vibrant purple swirls.',
     image: 'https://picsum.photos/300/200?random=48',
-    price: '₹699',
+    price: 699,
     category: 'Healing',
   },
   {
@@ -392,7 +392,7 @@ export const products = [
     name: 'Lemon Balm Uplifting Spray',
     description: 'Uplifts mood with its fresh, citrusy scent.',
     image: 'https://picsum.photos/300/200?random=49',
-    price: '₹329',
+    price: 329,
     category: 'Spiritual',
   },
   {
@@ -400,7 +400,7 @@ export const products = [
     name: 'Pyrite Prosperity Cube',
     description: 'Attracts wealth and success with its metallic golden shine.',
     image: 'https://picsum.photos/300/200?random=50',
-    price: '₹599',
+    price: 599,
     category: 'Healing',
   },
 ];

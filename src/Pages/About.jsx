@@ -1,7 +1,11 @@
 import about from "../Assets/about/about.jpg";
 import SocialMedia from "../Components/SocialMedia";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full font-title bg-purple-50">
       <div className="max-w-7xl mx-auto">
