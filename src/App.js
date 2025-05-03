@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 import Banner from "./Components/Banner";
 
 // Pages
@@ -22,6 +22,10 @@ import AdminAuth from "./Auth/AdminAuth";
 import AuthPage from "./Auth/AuthPage";
 import Booking from "../src/Data/Booking/Booking";
 import ThankYouPage from "./Data/Booking/ThankYouPage";
+import PrivacyPolicy from "./Components/Footer/PrivacyPolicy";
+import TermsConditions from "./Components/Footer/TermsConditions";
+import CookiePolicy from "./Components/Footer/CookiePolicy";
+import Disclaimer from "./Components/Footer/Disclaimer";
 
 function App() {
   return (
@@ -66,8 +70,16 @@ function App() {
           {/* Auth */}
           <Route path="/adminAuth" element={<AdminAuth />} />
           <Route path="/auth" element={<AuthPage />} />
+
+          {/* Footer */}
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/termsConditions" element={<TermsConditions />} />
+          <Route path="/cookiePolicy" element={<CookiePolicy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+
         </Routes>
         <Footer />
+        
       </Router>
     </div>
   );
