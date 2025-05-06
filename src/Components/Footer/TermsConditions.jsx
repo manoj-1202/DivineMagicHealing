@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 const TermsConditions = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 sm:p-10 lg:p-12">
@@ -15,7 +19,7 @@ const TermsConditions = () => {
             1. Introduction
           </h2>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            Welcome to <strong>Divine Magic Healing Space</strong> ("Website") ("we", "us", or "our"). By accessing or using our Website, you agree to be bound by these Terms and Conditions ("Terms"). If you disagree with any part of these terms, please do not use our Website.
+            Welcome to <strong>Divine Magic Healing Space</strong>. By accessing or using our Website, you agree to be bound by these Terms and Conditions ("Terms"). If you disagree with any part of these terms, please do not use our Website.
           </p>
         </section>
 
@@ -69,7 +73,7 @@ const TermsConditions = () => {
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             Please read our{' '}
             <Link
-              to="/privacy-policy"
+              to="/privacyPolicy"
               className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               aria-label="Privacy Policy"
             >

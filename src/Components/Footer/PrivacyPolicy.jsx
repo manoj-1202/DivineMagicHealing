@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from "react";
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 sm:p-10 lg:p-12">
@@ -11,7 +15,7 @@ const PrivacyPolicy = () => {
 
         <section className="mb-8">
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            Welcome to <strong>Divine Magic Healing Space</strong> ("we", "our", or "us"). Your privacy is critically important to us, and we are committed to protecting it through our compliance with this policy.
+            Welcome to <strong>Divine Magic Healing Space</strong> Your privacy is critically important to us, and we are committed to protecting it through our compliance with this policy.
           </p>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mt-4">
             This policy describes the types of information we may collect from you or that you may provide when you visit the website{' '}
